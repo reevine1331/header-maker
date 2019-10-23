@@ -1,0 +1,17 @@
+{
+  "name": "header-maker1",
+  "version": "1.0.0",
+  "description": "My ultimate Nuxt.js project",
+  "author": "kebine",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
