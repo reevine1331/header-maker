@@ -1,55 +1,68 @@
 <template>
   <div>
+    <Header />
     <nuxt />
   </div>
 </template>
 
-<style>
+<script>
+import Header from "~/components/molecules/Header";
+
+export default {
+  components: {
+    Header
+  }
+};
+</script>
+
+<style lang="scss">
+@import "~/assets/sass/font-family.scss";
+
+* {
+  font-family: "Noto Serif JP", serif;
+  box-sizing: border-box;
+}
+
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+  height: 100%;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
+body {
+  margin: 0 !important;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+@media screen and (max-width: 499px) {
+  .title {
+    font-size: 28px !important;
+  }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+  .create_content {
+    display: block !important;
+  }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+  .controller {
+    display: inline-block !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+  input[type="text"] {
+    text-align: center !important;
+  }
+
+  .create {
+    padding: 16% 8% !important;
+  }
+
+  #canvas_wrapper {
+    margin-bottom: 24px !important;
+  }
+
+  .controller_row {
+    margin: 0 !important;
+  }
 }
 </style>
